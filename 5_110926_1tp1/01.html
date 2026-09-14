@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Metoda getElementById()</title>
+</head>
+<body>
+<h3 id="title">Metoda getElementById()</h3>
+<p id="par1"></p>
+<p id="par2"></p>
+<p id="par3"></p>
+<p id="par4">To jest tekst, który pojawi się w innym akapicie</p>
+<script>
+  //tworzymy referencje do elementów HTML
+  const title = document.getElementById("title");
+  const par1 = document.getElementById("par1");
+  const par2 = document.getElementById("par2");
+  const par3 = document.getElementById("par3");
+  const par4 = document.getElementById("par4");
+
+  title.innerText = "To jest nowy tytuł :)";
+
+  const str1 = "To będzie tekst, który pojawi sie w 1 akapicie";
+  par1.innerText = str1;
+  par2.innerHTML = "To jest <strong>tekst</strong> z pogubieniem";
+  par3.innerHTML = par4.innerText;
+  par4.innerHTML = "=================";
+</script>
+</body>
+</html>

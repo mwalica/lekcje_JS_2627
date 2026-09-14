@@ -1,0 +1,40 @@
+<!--
+1. Napisz komentarz wieloliniowy w skrypcie javascript zawierający imię nazwisko i klasę
+2. Stwórz zmienną o nazwie text1 i nadaj jej wartość tekstową - dwa zdania opisujące miasto Cieszyn.
+3. Stwórz zmienną o nazwie text2 i nadaj jej wartość tekstową - dwa zdania opisujące twoje zainteresowania.
+4. Utworzone zmienne wykorzystaj, aby wypełnić dwa akapity znajdujące się w załączonym dokumencie html.
+5. Do wprowadzenia tekstu do akapitów wykorzystaj metodę querySelector() lub getElementById().
+
+ -->
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript - ćwiczenia</title>
+</head>
+<body>
+<h3 id="title">Metoda querySelector()</h3>
+<p id="par1"></p>
+<p id="par2"></p>
+<script>
+  /*
+  Marek
+  Walica
+  1TP
+   */
+
+  const text1 = "Pierwsze zdanie. Drugie zdanie.";
+  const text2 = "Pierwsze zdanie drugiej zmiennej. Drugie zdanie.";
+
+  const title = document.getElementById("title");
+  const par1 = document.getElementById("par1");
+  const par2 = document.getElementById("par2");
+
+  par1.innerHTML = text1;
+  par2.innerHTML = text2;
+  title.innerHTML = "Funkcja getElementById()";
+</script>
+</body>
+</html>
