@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>String i konkatenacja w JavaScript</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+<div id="par5"></div>
+<div id="par6"></div>
+<div id="par7"></div>
+
+<script>
+    const par1 = document.getElementById("par1");
+    const par2 = document.getElementById("par2");
+    const par3 = document.getElementById("par3");
+    const par4 = document.getElementById("par4");
+    const par5 = document.getElementById("par5");
+    const par6 = document.getElementById("par6");
+    const par7 = document.getElementById("par7");
+
+    const car1 = "Fiat";//string
+    const car2 = 'Toyota';//string
+    const numA = 23;
+    console.log(typeof car1);
+    console.log(typeof(car2));
+    console.log(typeof(numA));
+
+    par1.innerHTML = 'To jest zdanie ze "słowem" w cudzysłowie';
+    par1.innerHTML = "To jest zdanie ze \"słowem\" w cudzysłowie";
+    par2.innerHTML = "I'm Marek";
+    par2.innerHTML = 'I\'m Marek';
+
+    //konkatenacja +
+    //kot dom => kotdom
+    //12 34 => 12 + 34 1234
+    const firstName = "Jan";
+    const lastName = "Kowalski";
+    const age = 23;
+
+    par3.innerHTML = "Nazywam się " + firstName + " " + lastName + " i mam " + age + " lat";
+    par4.innerHTML = 'Nazywam się ' + firstName + ' ' + lastName + ' i mam ' + age + ' lat'
+    par5.innerHTML = `Nazywam się ${firstName} ${lastName} i mam ${age * 2} lat`;
+
+    //kot telefon dom
+    const word1 = "kot";
+    const word2 = "telefon";
+    const word3 = "dom";
+
+    par6.innerHTML = word1 + " jest w " + word3 + "u i rozmawia przez " + word2 + ".";
+    par7.innerHTML = `${word1} jest w ${word3}u i rozmawia przez ${word2}.`;
+    //
+    const word4 = "szkoła";
+    const word5 = "słowa";
+    const word6 = "komputer";
+
+    par6.innerHTML = word6 + " i " + word4 + " to ważne " + word5;
+    par6.innerHTML = `${word6} i ${word4} to ważne ${word5}`;
+</script>
+</body>
+</html>
