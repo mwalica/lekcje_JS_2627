@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Konkatenacja</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+    const par1 = document.getElementById("par1");
+    const par2 = document.getElementById("par2");
+    const par3 = document.getElementById("par3");
+    const par4 = document.getElementById("par4");
+
+    //konkatenacja + -> łączenie ciągów znaków ze zmiennymi
+    //kot pies => kotpies
+    //23 67 => 2367
+    let name = "Jan";
+    let lastName = "Kowalski";
+    let age = 60;
+
+    //Nazywam się Jan Kowalski i mam 60 lat.
+    par1.innerHTML = "Nazywam się " + name + " " + lastName + " i mam " + age + " lat.";
+    par2.innerHTML = 'Nazywam się ' + name + ' ' + lastName + ' i mam ' + age + ' lat.';
+    par3.innerHTML = `Nazywam się ${name} ${lastName} i mam ${age*2} lat.`;
+
+
+
+
+
+</script>
+</body>
+</html>
