@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Programowanie w JavaScript - typ Number</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+    const par1 = document.getElementById("par1");
+    const par2 = document.getElementById("par2");
+    const par3 = document.getElementById("par3");
+    const par4 = document.getElementById("par4");
+
+    const num1 = 234;//type number integer
+    const num2 = 23.67;//type number float
+    const num3 = 1.34e3;//type number float
+    const num4 = 0b111;//type number binarna
+    const num5 = 0x129AF;//type number szesnastkowa
+    const num6 = 0o342;//type number ósemkowa
+    const num7 = 234 * "20";
+    const num8 = 234 + "20";
+    const num9 = 234 * "koza";
+
+
+    par1.innerHTML = `
+    <ul>
+        <li>num1 = ${num1} jest typu ${typeof(num1)}</li>
+        <li>num2 = ${num2} jest typu ${typeof(num2)}</li>
+        <li>num3 = ${num3} jest typu ${typeof(num3)}</li>
+        <li>num4 = ${num4} jest typu ${typeof(num4)}</li>
+        <li>num5 = ${num5} jest typu ${typeof(num5)}</li>
+        <li>num6 = ${num6} jest typu ${typeof(num6)}</li>
+        <li>num7 = ${num7} jest typu ${typeof(num7)}</li>
+        <li>num8 = ${num8} jest typu ${typeof(num8)}</li>
+        <li>num9 = ${num9} jest typu ${typeof(num9)}</li>
+    </ul>
+    `;
+
+
+</script>
+</body>
+</html>

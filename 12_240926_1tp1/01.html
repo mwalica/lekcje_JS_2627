@@ -1,0 +1,42 @@
+<!--1. Napisz komentarz wieloliniowy w skrypcie javascript zawierający imię nazwisko i klasę-->
+<!--2. Zadeklaruj i zainicjalizuj zmienną o dowolnej dozwolonej nazwie i nadaj jej wartość tekstową: Hello JavaScript.-->
+<!--3. Zadeklaruj i zainicjalizuj zmienną o nazwie text1 i nadaj jej wartość tekstową: dwa zdania opisujące miasto Cieszyn.-->
+<!--4. Zadeklaruj i zainicjalizuj  zmienną o nazwie text2 i nadaj jej wartość tekstową - dwa zdania opisujące twoje zainteresowania.-->
+<!--5. Zmienną utworzoną w punkcie 2 zaprezentuj w konsoli logów.-->
+<!--6. Utworzone zmienne text1 i text2 wykorzystaj, aby wypełnić dwa akapity znajdujące się w dokumencie html (wypełnienie tekstem musi odbywać się przy pomocy odpowiednich funkcji i właściwości JavaScript - getElementById() i innerHTML).-->
+<!--7. Na końcu skryptu napisz komentarz jednoliniowy o treści: Koniec programu-->
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript - kartkówka</title>
+</head>
+<body>
+<h3>Kartkówka</h3>
+<p id="par1"></p>
+<p id="par2"></p>
+<script>
+  /*
+  Jan
+  Kowal
+  1tp
+   */
+
+  const title = "Hello JavaScript";
+  const text1 = "Pierwszze zdanie. Drugie zdania";
+  const text2 = "Pierwszze zdanie 2. Drugie zdania 2";
+
+  console.log(title);
+
+  const par1 = document.getElementById("par1");
+  const par2 = document.getElementById("par2");
+
+  par1.innerHTML = text1;
+  par2.innerHTML = text2;
+
+  //koniec
+</script>
+</body>
+</html>
