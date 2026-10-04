@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Programowanie w JavaScript</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+  // Jak masz na imię?
+  //         Jak masz na nazwisko?
+  //         Ile masz lat?
+  //         "Twój ulubiony kolor?" (kolor w języku angielskim)
+  // Co lubisz jeść?
+  const par1 = document.getElementById("par1");
+  const par2 = document.getElementById("par2");
+  const par3 = document.getElementById("par3");
+  const par4 = document.getElementById("par4");
+
+  const firstName = prompt("Jak masz na imię?");
+  const lastName = prompt("Jak masz na nazwisko?");
+  const age = prompt("Ile masz lat?");
+  const likeColor = prompt("Ulubiony kolor?", "kolor w języku angielski");
+  const eat = prompt("Co lubisz jeść?");
+
+  par1.innerHTML = `Nazywam się <b>${firstName} ${lastName}</b> i mam ${age} lat.
+Moim ulubionym kolorem jest <span style="color: ${likeColor};">${likeColor}</span> i lubię jeść <b>${eat}</b>`;
+</script>
+</body>
+</html>
