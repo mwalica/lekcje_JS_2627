@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Operatory - skrócony zapis</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+    const par1 = document.getElementById("par1");
+    const par2 = document.getElementById("par2");
+    const par3 = document.getElementById("par3");
+    const par4 = document.getElementById("par4");
+
+    let a = 20;
+    //zwiekszyć a o 40
+    //a = a + 40;
+    a += 40;
+    //a = a % 5;
+    a %= 5;
+    //zwiększanie zmiejszanie o 1
+    a  += 1;
+    //inkrementacja
+    a++;//inkrementacja
+    a--;//dekrementacja
+    console.log("a = ", a);
+
+    let b = 10;
+    console.log(b++);//postinkrementacja
+    console.log(++b);//preinkrementacja
+    console.log(b);
+
+    let str = "Warszawa ";
+    str += "jest stolicą Polski";
+    console.log(str);
+
+    let c = 10;
+    c++;
+    c -= 26;
+    c /= 2;
+    c += 100;
+    console.log(c);
+
+</script>
+</body>
+</html>

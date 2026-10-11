@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Programowanie w JavaScript</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+
+
+  //         wpisana liczba + 10 = wynik dodawania liczba + 10 (patrz screen)
+  // wpisana liczba do potęgi 3 = wynik potęgowania liczba do 3 (patrz screen)
+  const par1 = document.getElementById("par1");
+  const par2 = document.getElementById("par2");
+  const par3 = document.getElementById("par3");
+  const par4 = document.getElementById("par4");
+
+  const country = prompt("Wpisz dowolne państwo");
+  const city = prompt("Wpisz miasto z wpisanego wcześniej państwa");
+  const continent = prompt("Wpisz kontynent na jakim znajduje się wpisane wcześniej państwo");
+  const num1 = prompt("Wpisz liczbę całkowitą");
+
+  const number1 = parseInt(num1);
+
+  par1.innerHTML = `
+  Państwo: <span style="color: red;">${country}</span><br>
+  Miasto: <span style="color: blue;">${city}</span><br>
+  Kontynent: <span style="color: pink;">${continent}</span><br>
+  `;
+  par2.innerHTML = `
+  ${number1} + 10 = <span style="color: green;">${number1 + 10}</span><br>
+  ${number1}<sup>3</sup> = <span style="color: orange">${number1**3}</span>
+  `
+</script>
+</body>
+</html>

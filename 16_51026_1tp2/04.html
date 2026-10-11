@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Programowanie w JavaScript</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+<div id="par5"></div>
+<div id="par6"></div>
+
+<script>
+    const par1 = document.getElementById("par1");
+    const par2 = document.getElementById("par2");
+    const par3 = document.getElementById("par3");
+    const par4 = document.getElementById("par4");
+    const par5 = document.getElementById("par5");
+    const par6 = document.getElementById("par6");
+
+    const numberA = prompt("Wpisz liczbę A", "liczba całkowita");
+    const numberB = prompt("Wpisz liczbę B", "liczba całkowita");
+    const numberC = prompt("Wpisz liczbę C", "liczba całkowita");
+
+    const a = parseInt(numberA);
+    const b = parseInt(numberB);
+    const c = parseInt(numberC);
+
+    const result1 = a + b - 2 * c * b;
+    const result3 = ((a+b)**a)/(c-a);
+
+    par1.innerHTML = `a = ${a}<br>b = ${b}<br>c = ${c}`;
+    par2.innerHTML = `Wyrażenie 1: <span style="color: red;">${result1}</span> `;
+    par3.innerHTML = `Wyrażenie 2: <span style="color: red;">${3*a*b+4*b*c}</span> `;
+    par4.innerHTML = `Wyrażenie 3: <span style="color: red;">${result3}</span> `;
+</script>
+</body>
+</html>

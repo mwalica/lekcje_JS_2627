@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Operatory matematyczne w JS</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+  const par1 = document.getElementById("par1");
+  const par2 = document.getElementById("par2");
+  const par3 = document.getElementById("par3");
+  const par4 = document.getElementById("par4");
+
+  const numberA = prompt("Wpisz liczbę A");
+  const numberB = prompt("Wpisz liczbę B");
+  const numberC = prompt("Wpisz liczbę C");
+
+  //parseInt() - metoda zamieniająca dane na liczbę całkowitą
+  //parseFloat() - metoda zamienieniająca na liczbę zmiennoprzecinkową
+
+  const a = parseInt(numberA);
+  const b = parseInt(numberB);
+  const c = parseFloat(numberC);
+
+  const result1 = a + b;
+  const result2 = a + c;
+
+  par1.innerHTML = "Wynik 1: " + result1;
+  par2.innerHTML = "Wynik 2: " + result2.toFixed(2);
+  par3.innerHTML = `
+  <ul>
+    <li>a = ${a}, b = ${b}</li>
+    <li>a + b = ${a + b}</li>
+    <li>a - b = ${a - b}</li>
+    <li>a x b = ${a * b}</li>
+    <li>a : b = ${a / b}</li>
+    <li>a<sup>b</sup> = ${a ** b}</li>
+    <li>reszta z dzielenia a przez b jest ${a % b}</li>
+  </ul>
+  `;
+</script>
+</body>
+</html>

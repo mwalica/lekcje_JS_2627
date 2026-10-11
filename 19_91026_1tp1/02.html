@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Typ boolean - logiczny</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+  const par1 = document.getElementById("par1");
+  const par2 = document.getElementById("par2");
+  const par3 = document.getElementById("par3");
+  const par4 = document.getElementById("par4");
+
+  let isBig = false;
+  isBig = true;
+  isBig = 56 > 100;//
+  console.log(isBig);
+  console.log(100 >= 100);
+  console.log(33 === parseInt("33"));
+  console.log(33 === 33);
+  console.log(33 !== "koza");
+  const a = 123;
+  const b = 11;
+  par1.innerHTML = `a = ${a}, b =${b}`;
+  par2.innerHTML = `${a} > ${b}: ${a > b}`;
+  par3.innerHTML = `${a} < ${b}: ${a < b}`;
+  par4.innerHTML = `${a} = ${b}: ${a === b}<br>
+${a} nie jest równe ${b}: ${a !== b}
+`;
+</script>
+</body>
+</html>
