@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Instrukcja warunkowa</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+    const par1 = document.getElementById("par1");
+    const par2 = document.getElementById("par2");
+    const par3 = document.getElementById("par3");
+    const par4 = document.getElementById("par4");
+
+    const randomNumber = Math.round(Math.random() * 20 - 10);
+
+    if (randomNumber > 0) {
+        par2.innerHTML = "Wylosowana liczba jest dodatnia";
+        if(randomNumber >= 7) {
+            par2.innerHTML += " i jest bardzo duża";
+        }
+    } else if (randomNumber < 0) {
+        par2.innerHTML = "Wylosowana liczba jest ujemna";
+    } else {
+        par2.innerHTML = "Wylosowana liczba jest ZEREM";
+    }
+
+    // if(randomNumber < 0) {
+    //   par2.innerHTML = "Wylosowana liczba jest ujemna";
+    // }
+    //
+    // if(randomNumber === 0) {
+    //   par2.innerHTML = "Wylosowana liczba jest ZEREM";
+    // }
+
+    par1.innerHTML = `Wylosowana liczba: <strong>${randomNumber}</strong>`;
+    par3.innerHTML = "Koniec programu";
+
+</script>
+</body>
+</html>

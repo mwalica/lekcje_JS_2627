@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Programowanie w JavaScript</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+  const par1 = document.getElementById("par1");
+  const par2 = document.getElementById("par2");
+  const par3 = document.getElementById("par3");
+  const par4 = document.getElementById("par4");
+
+  const randomNum = Math.round(Math.random() * 200 - 100);
+  par1.innerHTML = `Wylosowana liczba <strong>${randomNum}</strong>`;
+
+  if(randomNum % 3 === 0 && randomNum % 4 === 0) {
+    par2.innerHTML = "<span style='color: green;'>Wylosowana liczba jest podzielna przez 3 i 4</span>"
+  } else if(randomNum % 3 === 0) {
+    par2.innerHTML = "<span>Wylosowana liczba jest podzielna przez 3</span>";
+  } else if(randomNum % 4 === 0) {
+    par2.innerHTML = "<span>Wylosowana liczba jest podzielna przez 4</span>";
+  } else {
+    par2.innerHTML = "<span style='color: red;'>Wylosowana liczba nie jest podzielna przez 3 i 4</span>"
+  }
+</script>
+</body>
+</html>

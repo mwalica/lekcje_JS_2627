@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Programowanie w JavaScript</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+  const par1 = document.getElementById("par1");
+  const par2 = document.getElementById("par2");
+  const par3 = document.getElementById("par3");
+  const par4 = document.getElementById("par4");
+
+  const strNumber = prompt("Wpisz liczbe całkowitą");
+  const numberA = parseInt(strNumber);
+
+  par1.innerHTML = `Liczba ${numberA}:<br>
+  jest równa zero <strong style="color: red;">${numberA === 0}</strong><br>
+  nie jest równa zero <strong style="color: green">${numberA !== 0}</strong><br>
+  jest dodatnia <strong style="color: blue;">${numberA > 0}</strong><br>
+  jest ujemna <strong style="color: orange;">${numberA < 0}</strong>
+</br>
+  `;
+</script>
+</body>
+</html>

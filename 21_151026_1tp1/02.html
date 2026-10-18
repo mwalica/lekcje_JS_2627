@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prompt, konkatenacja, operatory matematyczne</title>
+</head>
+<body>
+<h3>Prompt, konkatenacja, operatory matematyczne</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<script>
+  const par1 = document.getElementById("par1");
+  const par2 = document.getElementById("par2");
+
+  const color = prompt("Wpisz kolor w języku angielskim");
+  const numberA = parseFloat(prompt("Wpisz liczbę A"));
+
+  par1.innerHTML = `Wpisany kolor to: <span style="color: ${color}">${color}</span>`;
+  par2.innerHTML = `3a<sup>3</sup> = <strong>${(3*numberA**3).toFixed(2)}</strong>`;
+
+
+</script>
+</body>
+</html>

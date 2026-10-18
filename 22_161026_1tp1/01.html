@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Losowanie liczby</h3>
+<ul id="par1"></ul>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+    const par1 = document.getElementById("par1");
+    const par2 = document.getElementById("par2");
+    const par3 = document.getElementById("par3");
+    const par4 = document.getElementById("par4");
+
+
+    const randomNum1 = Math.random();
+    const randomNum2 = (Math.random() * 100).toFixed();
+    const randomNum3 = Math.round(Math.random() * 100);
+    const randomNum4 = Math.round(Math.random() * 99 + 1);
+    const randomNum5 = Math.round(Math.random() * 20 - 10);
+    const randomNum6 = Math.round(Math.random() * 16 - 6);
+
+    par1.innerHTML = `
+    <li>Wylosowana liczba (od 0 do 0.999999): ${randomNum1}</li>
+    <li>Wylosowana liczba (od 0 do 100): ${randomNum2}</li>
+    <li>Wylosowana liczba (od 0 do 100): ${randomNum3}</li>
+    <li>Wylosowana liczba (od 1 do 100): ${randomNum4}</li>
+    <li>Wylosowana liczba (od -10 do 10): ${randomNum5}</li>
+    <li>Wylosowana liczba (od -6 do 10): ${randomNum6}</li>
+    `;
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Typ logiczny - boolean</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+  const par1 = document.getElementById("par1");
+  const par2 = document.getElementById("par2");
+  const par3 = document.getElementById("par3");
+  const par4 = document.getElementById("par4");
+
+  const bool1 = true;
+  let bool2 = false;
+  const bool3 = !true;
+  bool2 = 48 > 100;
+  bool2 = 48 >= 32;
+  bool2 = 56 === "56";
+  bool2 = 100 !== 1000;
+  bool2 = 100 !== "koza";
+  console.log(typeof(bool1));
+  par1.innerHTML = bool2;
+</script>
+</body>
+</html>
