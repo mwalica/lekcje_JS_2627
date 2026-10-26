@@ -3,43 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kartkówka</title>
 </head>
 <body>
+
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<h3>Prompt(), konkatenacja</h3>
 <script>
 
-    //nagłówek h3 0/1
-    //komentarz jednoliniowy o treści: początek skryptu 1/1
-    //deklaracja car 0/1
-    //deklaracja inicjalizacja 3 zmiennych 2/2
-    //wypisanie w console.log() 1/1
-    //przypisanie car Fiat Panda 1/1
-    //alert z car 1/1
-    //komentarz wieloliniowy 1/1
-    //7/9
+    const par1 = document.getElementById("par1")
+    const par2 = document.getElementById("par2")
+    const par3 = document.getElementById("par3")
+    const par4 = document.getElementById("par4")
 
-    // początek skryptu
+    const color = prompt("Wpisz kolor w języku angielskim")
+    const numA = prompt("Wpisz liczbę A")
 
-    //let
+    const a = parseFloat("numA")
 
-        let pierwsza = "Franek";
-    let druga = "25";
-    let trzecia = "JavaScript";
+    const result1 = (3 * numA ** 3)
 
-    console.log("Pierwsza zmienna: " + pierwsza);
-    console.log("Druga zmienna: " + druga);
-    console.log("Trzecia zmienna: " + trzecia);
+    par1.innerHTML = `
+        Wpisany kolor to: <span style="color: ${color}">${color}</span>
+        `
 
-    car = Fiat Panda
+    par2.innerHTML  = `
+        3a<sup>3</sup> = <strong>${result1 .toFixed(2)}</strong>
+        `
 
-    alert(car);
 
-    /*
-    dzisiaj jest:
-    26.09.2026
-    */
+
 </script>
 
-
 </body>
-</html
+</html>

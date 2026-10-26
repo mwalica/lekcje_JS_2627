@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Programowanie w JavaScript</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+  const par1 = document.getElementById("par1");
+  const par2 = document.getElementById("par2");
+  const par3 = document.getElementById("par3");
+  const par4 = document.getElementById("par4");
+
+  const num1 = parseInt(prompt("Wpisz liczbę całkowitą"));
+  const num2 = parseInt(prompt("Wpisz dzielnik"));
+
+  if(!isNaN(num1) && !isNaN(num2) && num2 !== 0) {
+    if(num1%num2 === 0) {
+      par1.innerHTML = `Liczba ${num1} jest podzielna przez ${num2}`;
+    } else {
+      par1.innerHTML = `Liczba ${num1} nie jest podzielna przez ${num2}`;
+    }
+  } else if(num2 === 0 && !isNaN(num1) && !isNaN(num2)) {
+    par1.innerHTML = "Nie można dzielić przez zero";
+  } else {
+    par1.innerHTML = "Prosze wpisać poprawne wartości";
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Ternary operator</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+  const par1 = document.getElementById("par1");
+  const par2 = document.getElementById("par2");
+  const par3 = document.getElementById("par3");
+  const par4 = document.getElementById("par4");
+
+  const capital = prompt("Stolica Polski");
+  const age = Math.round(Math.random() * 99 + 1);
+
+  // let msg = null;
+  //
+  // if(capital === "Warszawa") {
+  //   msg = "Dobra odpowiedź";
+  // } else {
+  //   msg = "Zła odpowiedź";
+  // }
+
+  //                  warunke                  true             false
+  const msg = capital === "Warszawa" ? "Dobra odpwiedź" : "Zła odpowiedź";
+
+  par1.innerHTML = msg;
+  par2.innerHTML = capital === "Warszawa" ? "Dobra odpwiedź" : "Zła odpowiedź";
+  par3.innerHTML = `Karol jest ${age > 17 ? "dorosły" : "dzieckiem"}`;
+</script>
+</body>
+</html>

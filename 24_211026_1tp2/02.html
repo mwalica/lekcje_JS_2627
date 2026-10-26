@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Instrukcja warunkowa if</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+  const par1 = document.getElementById("par1");
+  const par2 = document.getElementById("par2");
+  const par3 = document.getElementById("par3");
+  const par4 = document.getElementById("par4");
+
+  const randomNum = Math.round(Math.random() * 20 - 10);
+
+  par1.innerHTML = `Wylosowana liczba: <strong>${randomNum}</strong>`;
+
+  if(randomNum > 0) {
+    par2.innerHTML = "Wylosowana liczba jest dodatnia";
+    if(randomNum > 7) {
+      par2.innerHTML += " i jest większa od 7";
+    }
+  } else if(randomNum < 0) {
+    par2.innerHTML = "Wylosowana liczba jest ujemna";
+  } else {
+    par2.innerHTML = "Wylosowana liczba jest ZEREM";
+  }
+
+  // if(randomNum < 0) {
+  //   par2.innerHTML = "Wylosowana liczba jest ujemna";
+  // }
+  //
+  // if(randomNum === 0) {
+  //   par2.innerHTML = "Wylosowana liczba jest ZEREM";
+  // }
+
+  if(randomNum % 2 === 0) {
+    par3.innerHTML = "Liczba jest parzysta";
+  } else {
+    par3.innerHTML = "Liczba  nieparzysta";
+  }
+
+  if(randomNum >= -2 && randomNum <= 2) {
+    par4.innerHTML = "<span style='color: red;'>trafiony</span>";
+  }
+
+</script>
+</body>
+</html>
