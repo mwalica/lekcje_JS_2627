@@ -6,7 +6,7 @@
   <title>Programowanie aplikacji webowych</title>
 </head>
 <body>
-<h3>Programowanie w JavaScript</h3>
+<h3 style="color: orange">Sprawdzenie podzielności przez 3 i przez 4</h3>
 <div id="par1"></div>
 <div id="par2"></div>
 <div id="par3"></div>
@@ -17,6 +17,19 @@
   const par2 = document.getElementById("par2");
   const par3 = document.getElementById("par3");
   const par4 = document.getElementById("par4");
+
+  const randomNum = Math.round(Math.random() * 200 - 100);
+  par1.innerHTML = `Wylosowana liczba: <b>${randomNum}</b>`;
+
+  if(randomNum % 3 === 0 && randomNum % 4 === 0) {
+    par2.innerHTML = '<span style="color: green">Wylosowana liczba jest podzielna przez 3 i przez 4</span>';
+  } else if(randomNum % 3 === 0) {
+    par2.innerHTML = "Wylosowana liczba  jest podzielna przez 3 i nie jest podzielna przez 4";
+  } else if(randomNum % 4 === 0) {
+    par2.innerHTML = "Wylosowana liczba  jest podzielna przez 4 i nie jest podzielna przez 3";
+  } else {
+    par2.innerHTML = '<span style="color: red">Wylosowana liczba nie jest podzielna przez 3 i nie jest podzielna przez 4</span>';
+  }
 </script>
 </body>
 </html>

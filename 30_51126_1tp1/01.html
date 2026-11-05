@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programowanie aplikacji webowych</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid gray;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+<h3>Java Script</h3>
+<table>
+    <tr>
+        <th>język polski</th>
+        <th>język angielski</th>
+    </tr>
+    <tr>
+        <td id="par1"></td>
+        <td id="par2"></td>
+    </tr>
+</table>
+
+<script>
+    const par1 = document.getElementById("par1");
+    const par2 = document.getElementById("par2");
+
+    const color = prompt("Wpisz nazwe koloru");
+    let english = null;
+
+    // if(color === "czerwony") {
+    //     english = "red";
+    // } else if(color === "zielony") {
+    //     english = "green";
+    // } else if(color === "niebieski") {
+    //     english = "blue";
+    // } else if(color === "żółty") {
+    //     english = "yellow";
+    // } else {
+    //     english = "Nie znam takiego koloru";
+    // }
+
+    switch (color) {
+        case "czerwony":
+        case "Czerwony":
+            english = "red";
+            break;
+        case "niebieski":
+            english = "blue";
+            break;
+        case "różowy":
+            english = "pink";
+            break;
+        case "zielony":
+            english = "green";
+            break;
+        default:
+            english = "nie znam takiego koloru";
+    }
+
+    par1.innerHTML = color;
+    par2.innerHTML = english;
+
+
+</script>
+</body>
+</html>

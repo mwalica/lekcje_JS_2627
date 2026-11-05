@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programowanie aplikacji webowych</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid gray;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+<h3>Instrukcja switch</h3>
+<table>
+    <tr>
+        <th>polski</th>
+        <th>angielski</th>
+    </tr>
+    <tr>
+        <td id="par1"></td>
+        <td id="par2"></td>
+    </tr>
+</table>
+
+<script>
+    const par1 = document.getElementById("par1");
+    const par2 = document.getElementById("par2");
+
+    const color = prompt("Wpisz nazwę koloru");
+    par1.innerHTML = color;
+
+    let english = "";
+
+    // if(color === "czerwony") {
+    //     english = "red";
+    // } else if(color === "czarny") {
+    //     english = "black";
+    // } else if(color === "zielony") {
+    //     english = "green";
+    // } else if(color === "żółty") {
+    //     english = "yellow";
+    // } else {
+    //     english = "nie znam takiego koloru";
+    // }
+
+    switch (color) {
+        case "czerwony":
+            english = "red";
+            break;
+        case "zielony":
+            english = "green";
+            break;
+        case "niebieski":
+            english = "blue";
+            break;
+        case "żółty":
+            english = "yellow";
+            break;
+        default:
+            english = "Nie znam takiego koloru";
+    }
+
+    par2.innerHTML = `<span style="color: ${english};">${english}</span>`;
+
+</script>
+</body>
+</html>

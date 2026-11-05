@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Programowanie w JavaScript</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+  const par1 = document.getElementById("par1");
+  const par2 = document.getElementById("par2");
+  const par3 = document.getElementById("par3");
+  const par4 = document.getElementById("par4");
+
+  const str1 = prompt("Podaj liczbę całkowitą");
+  const num1 = parseInt(str1);
+
+  const str2 = prompt("Podaj dzielnik bedacy liczbą całkowitą");
+  const num2 = parseInt(str2);
+
+  if(!isNaN(num1) && !isNaN(num2)) {
+    if(num1 % num2 === 0) {
+      par1.innerHTML = `Liczba <b>${num1}</b> jest podzielna przez <b>${num2}</b>`;
+    } else {
+      par1.innerHTML = `Liczba <b>${num1}</b> nie jest podzielna przez <b>${num2}</b>`;
+    }
+  } else {
+    par1.innerHTML = "Wprowadzone informacje nie są liczbami";
+  }
+</script>
+</body>
+</html>
