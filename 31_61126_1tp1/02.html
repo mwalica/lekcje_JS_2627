@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Java Script</h3>
+<div id="par1"></div>
+<div id="par2"></div>
+<div id="par3"></div>
+<div id="par4"></div>
+
+<script>
+  const par1 = document.getElementById("par1");
+  const par2 = document.getElementById("par2");
+  const par3 = document.getElementById("par3");
+  const par4 = document.getElementById("par4");
+
+  let counter1 = 20;
+  let result1 = "";
+
+  while(counter1 <= 50) {
+    result1 += counter1 + " ";
+    counter1 += 5;
+  }
+
+  par1.innerHTML = result1;
+
+  let counter2 = 10;
+  let result2 = "";
+
+  while(counter2 >= -10) {
+    if(counter2 > 0) {
+    result2 += counter2 + " ";
+    } else {
+      result2 += `<span style="color: red">${counter2} </span>`;
+    }
+    counter2--;
+  }
+
+  par2.innerHTML = result2;
+
+</script>
+</body>
+</html>

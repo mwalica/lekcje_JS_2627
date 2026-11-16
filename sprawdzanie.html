@@ -1,41 +1,231 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartkówka</title>
+    <title>Quiz wiedzy</title>
 </head>
 <body>
 
-<div id="par1"></div>
-<div id="par2"></div>
-<div id="par3"></div>
-<div id="par4"></div>
+<h1>Quiz wiedzy</h1>
+<p>Informatyka, geografia i fizyka</p>
 
-<h3>Prompt(), konkatenacja</h3>
+<h3 id="numer">Pytanie 1 z 10</h3>
+<h2 id="pytanie"></h2>
+
+<input type="radio" name="odp" id="a" value="A">
+<label id="tekstA" for="a"></label>
+<br>
+
+<input type="radio" name="odp" id="b" value="B">
+<label id="tekstB" for="b"></label>
+<br>
+
+<input type="radio" name="odp" id="c" value="C">
+<label id="tekstC" for="c"></label>
+<br>
+
+<input type="radio" name="odp" id="d" value="D">
+<label id="tekstD" for="d"></label>
+<br><br>
+
+<button onclick="sprawdz()">Zatwierdź odpowiedź</button>
+
+<p id="komunikat"></p>
+
 <script>
 
-    const par1 = document.getElementById("par1")
-    const par2 = document.getElementById("par2")
-    const par3 = document.getElementById("par3")
-    const par4 = document.getElementById("par4")
+    var pytania = [
+        "Co oznacza skrót CPU?",
+        "Jaka jest stolica Australii?",
+        "Jaka jest jednostka siły?",
+        "Który system liczbowy wykorzystuje tylko 0 i 1?",
+        "Jaki jest największy ocean na Ziemi?",
+        "Jaka jest jednostka mocy?",
+        "Co oznacza skrót RAM?",
+        "Na jakim kontynencie znajduje się Sahara?",
+        "Ile wynosi prędkość światła w próżni w przybliżeniu?",
+        "Która część komputera odpowiada za przetwarzanie grafiki?"
+    ];
 
-    const color = prompt("Wpisz kolor w języku angielskim")
-    const numA = prompt("Wpisz liczbę A")
+    var odpowiedziA = [
+        "Central Processing Unit",
+        "Sydney",
+        "Wat",
+        "Dziesiętny",
+        "Atlantycki",
+        "Dżul",
+        "Random Access Memory",
+        "Azja",
+        "300 000 km/s",
+        "Procesor"
+    ];
 
-    const a = parseFloat("numA")
+    var odpowiedziB = [
+        "Computer Personal Unit",
+        "Canberra",
+        "Newton",
+        "Binarny",
+        "Spokojny",
+        "Wolt",
+        "Read Access Memory",
+        "Afryka",
+        "150 000 km/s",
+        "Karta graficzna"
+    ];
 
-    const result1 = (3 * numA ** 3)
+    var odpowiedziC = [
+        "Central Program Utility",
+        "Melbourne",
+        "Amper",
+        "Ósemkowy",
+        "Indyjski",
+        "Wat",
+        "Random Active Memory",
+        "Europa",
+        "30 000 km/s",
+        "Dysk SSD"
+    ];
 
-    par1.innerHTML = `
-        Wpisany kolor to: <span style="color: ${color}">${color}</span>
-        `
+    var odpowiedziD = [
+        "Computer Processing Machine",
+        "Perth",
+        "Volt",
+        "Szesnastkowy",
+        "Arktyczny",
+        "Newton",
+        "Read Active Memory",
+        "Ameryka",
+        "3 000 km/s",
+        "Pamięć RAM"
+    ];
 
-    par2.innerHTML  = `
-        3a<sup>3</sup> = <strong>${result1 .toFixed(2)}</strong>
-        `
+    var poprawne = [
+        "A", "B", "B", "B", "B",
+        "C", "A", "B", "A", "B"
+    ];
 
+    var numer = 0;
+    var punkty = 0;
+    var dobre = 0;
+    var zle = 0;
 
+    function wyswietl() {
+
+        document.getElementById("numer").innerHTML =
+            "Pytanie " + (numer + 1) + " z 10";
+
+        document.getElementById("pytanie").innerHTML =
+            pytania[numer];
+
+        document.getElementById("tekstA").innerHTML =
+            "A. " + odpowiedziA[numer];
+
+        document.getElementById("tekstB").innerHTML =
+            "B. " + odpowiedziB[numer];
+
+        document.getElementById("tekstC").innerHTML =
+            "C. " + odpowiedziC[numer];
+
+        document.getElementById("tekstD").innerHTML =
+            "D. " + odpowiedziD[numer];
+
+        document.getElementById("a").checked = false;
+        document.getElementById("b").checked = false;
+        document.getElementById("c").checked = false;
+        document.getElementById("d").checked = false;
+
+    }
+
+    function sprawdz() {
+
+        var wybor = "";
+
+        if (document.getElementById("a").checked) {
+            wybor = "A";
+        }
+
+        if (document.getElementById("b").checked) {
+            wybor = "B";
+        }
+
+        if (document.getElementById("c").checked) {
+            wybor = "C";
+        }
+
+        if (document.getElementById("d").checked) {
+            wybor = "D";
+        }
+
+        if (wybor == "") {
+            document.getElementById("komunikat").innerHTML =
+                "Wybierz odpowiedź!";
+            return;
+        }
+
+        if (wybor == poprawne[numer]) {
+            punkty++;
+            dobre++;
+        } else {
+            zle++;
+        }
+
+        numer++;
+
+        if (numer < 10) {
+            document.getElementById("komunikat").innerHTML = "";
+            wyswietl();
+        } else {
+            podsumowanie();
+        }
+
+    }
+
+    function podsumowanie() {
+
+        var procent = punkty * 10;
+
+        document.getElementById("numer").innerHTML =
+            "Koniec quizu!";
+
+        document.getElementById("pytanie").innerHTML =
+            "Twój wynik: " + punkty + "/10 punktów";
+
+        document.getElementById("tekstA").innerHTML =
+            "Poprawne odpowiedzi: " + dobre;
+
+        document.getElementById("tekstB").innerHTML =
+            "Błędne odpowiedzi: " + zle;
+
+        document.getElementById("tekstC").innerHTML =
+            "Wynik procentowy: " + procent + "%";
+
+        if (procent >= 90) {
+            document.getElementById("tekstD").innerHTML =
+                "Interpretacja: Świetnie! Jesteś ekspertem!";
+        } else if (procent >= 70) {
+            document.getElementById("tekstD").innerHTML =
+                "Interpretacja: Bardzo dobry wynik!";
+        } else if (procent >= 50) {
+            document.getElementById("tekstD").innerHTML =
+                "Interpretacja: Nieźle, ale możesz się poprawić.";
+        } else {
+            document.getElementById("tekstD").innerHTML =
+                "Interpretacja: Warto powtórzyć materiał.";
+        }
+
+        document.getElementById("a").style.display = "none";
+        document.getElementById("b").style.display = "none";
+        document.getElementById("c").style.display = "none";
+        document.getElementById("d").style.display = "none";
+
+        document.querySelector("button").style.display = "none";
+
+        document.getElementById("komunikat").innerHTML =
+            "Dziękujemy za rozwiązanie quizu!";
+
+    }
+
+    wyswietl();
 
 </script>
 

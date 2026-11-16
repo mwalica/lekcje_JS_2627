@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programowanie aplikacji webowych</title>
+</head>
+<body>
+<h3>Pętla while</h3>
+<div id="par1"></div>
+
+<h3>Pętla do while</h3>
+<div id="par2"></div>
+
+<div id="par3"></div>
+<div id="par4"></div>
+<div id="par5"></div>
+
+<script>
+    const par1 = document.getElementById("par1");
+    const par2 = document.getElementById("par2");
+    const par3 = document.getElementById("par3");
+    const par4 = document.getElementById("par4");
+    const par5 = document.getElementById("par5");
+
+    let result1 = "";
+    //licznik
+    let counter1 = 0;
+
+    //petla while
+    while (counter1 <= 20) {
+        result1 += counter1 + " ";
+        counter1++;
+    }
+
+    par1.innerHTML = result1;
+
+    //do while
+    let result2 = "";
+    let counter2 = 0;
+
+    do {
+        result2 += counter2 + " ";
+        counter2++;
+    }
+    while (counter2 <= 20)
+
+    par2.innerHTML = result2;
+
+    let randomNum = Math.round(Math.random() * 99 + 1);
+    let result3 = "";
+    let counter3 = 1;
+
+    while(randomNum !== 50) {
+        randomNum = Math.round(Math.random() * 99 + 1);
+        result3 += `${randomNum} `;
+        counter3++;
+    }
+
+    par3.innerHTML = result3;
+    par4.innerHTML = `Ilość losowań: ${counter3}`;
+
+    let result4 = "";
+    let counter4 = 100;
+
+    while (counter4 >= 0) {
+        if(counter4 % 2 === 0) {
+            result4 += "<b>" + counter4 + "</b> ";
+        } else {
+            result4 += counter4 + " ";
+        }
+        counter4--;
+    }
+
+    par5.innerHTML = result4;
+
+</script>
+</body>
